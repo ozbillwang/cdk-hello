@@ -19,6 +19,6 @@
     "dependencies": {
         "@aws-cdk/aws-sns": "^0.36.1",
         "@aws-cdk/aws-sqs": "^0.36.1",
-        "@aws-cdk/cdk": "^0.36.0"
+        "@aws-cdk/cdk": "^0.36.1"
     }
 }
