@@ -15,7 +15,7 @@
         "@types/node": "^12.6.2",
         "@types/node": "^12.6.8",
         "typescript": "^3.5.3",
-        "aws-cdk": "^1.0.0"
+        "aws-cdk": "^1.1.0"
     },
     "dependencies": {
         "@aws-cdk/aws-sns": "^1.0.0",
