@@ -1,3 +1,4 @@
+import apigw = require("@aws-cdk/aws-apigateway");
 import lambda = require("@aws-cdk/aws-lambda");
 import cdk = require("@aws-cdk/core");
 
@@ -11,8 +12,11 @@ export class CdkHelloStack extends cdk.Stack {
       description: "lambda demo with cdk",
       handler: "hello.handler",
       runtime: lambda.Runtime.NODEJS_10_X,
-    },
+    });
 
-    );
+    // defines an API Gateway REST API resource backed by our "hello" function.
+    new apigw.LambdaRestApi(this, "Endpoint", {
+      handler: hello,
+    });
   }
 }
