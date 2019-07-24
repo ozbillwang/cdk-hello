@@ -5,7 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-unused-expression": false
+      "no-unused-expression": [true, "allow-new"]
     },
     "rulesDirectory": []
 }
