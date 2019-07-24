@@ -5,7 +5,8 @@
     ],
     "jsRules": {},
     "rules": {
-      "no-unused-expression": [true, "allow-new"]
+      "no-unused-expression": [true, "allow-new"],
+      "interface-name": [true, "never-prefix"]
     },
     "rulesDirectory": []
 }
