@@ -7,13 +7,15 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
+    "lint": "npx tslint bin/*.ts lib/*.ts",
     "cdk": "cdk"
   },
   "devDependencies": {
     "@types/node": "8.10.45",
     "typescript": "^3.3.3333",
     "ts-node": "^8.1.0",
-    "aws-cdk": "^1.1.0"
+    "aws-cdk": "^1.1.0",
+    "tslint": "^5.18.0"
   },
   "dependencies": {
     "@aws-cdk/aws-lambda": "^1.1.0",
