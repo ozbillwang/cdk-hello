@@ -8,6 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "npx tslint bin/*.ts lib/*.ts",
+    "lint-fix": "npx tslint --fix bin/*.ts lib/*.ts",
     "cdk": "cdk"
   },
   "devDependencies": {
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.1.0",
+    "@aws-cdk/aws-dynamodb": "^1.1.0",
     "@aws-cdk/aws-lambda": "^1.1.0",
     "@aws-cdk/aws-sns": "^1.1.0",
     "@aws-cdk/aws-sns-subscriptions": "^1.1.0",
