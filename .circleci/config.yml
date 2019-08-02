@@ -1,0 +1,54 @@
+version: 2.1
+
+### Context Setup
+# AWS_ACCESS_KEY_ID
+# AWS_DEFAULT_REGION=ap-southeast-2
+# AWS_REGION=ap-southeast-2
+# AWS_SECRET_ACCESS_KEY
+# AWS_ACCOUNT_ID
+
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:10
+
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+         name: lint
+         command: |
+           npm install -g aws-cdk 
+           npm ci
+           npm run lint
+           npm run build
+           cdk synth
+           cdk diff
+
+  deploy:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+         name: lint
+         command: |
+           npm install -g aws-cdk
+           npm ci
+           npm run build
+           cdk diff
+           cdk deploy
+
+workflows:
+  build:
+    jobs:
+      - build:
+          name: build_dev
+          context: DevContext
+      - deploy:
+          name: deploy_dev
+          context: DevContext
+          branches:
+            only:
+              - master
