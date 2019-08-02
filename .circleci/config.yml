@@ -20,7 +20,7 @@ jobs:
       - run:
          name: build
          command: |
-           npm install -g aws-cdk
+           sudo npm install -g aws-cdk
            npm ci
            npm run lint
            npm run build
@@ -34,7 +34,7 @@ jobs:
       - run:
          name: deploy
          command: |
-           npm install -g aws-cdk
+           sudo npm install -g aws-cdk
            npm ci
            npm run build
            cdk diff
