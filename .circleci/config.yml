@@ -46,11 +46,18 @@ workflows:
       - build:
           name: build_dev
           context: DevContext
+      - approval:
+          type: approval
+          requires:
+            - build_dev
+          filters:
+            branches:
+              only: master
       - deploy:
           name: deploy_dev
           context: DevContext
           requires:
-            - build_dev
+            - approval
           filters:
             branches:
               only: master
