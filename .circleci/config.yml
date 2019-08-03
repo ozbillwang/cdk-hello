@@ -26,7 +26,7 @@ jobs:
            npm run lint
            npm run build
            cdk synth
-           cdk diff
+           cdk diff || echo "ok"
 
   deploy:
     executor: node-executor
@@ -38,7 +38,7 @@ jobs:
            sudo npm install -g aws-cdk
            npm ci
            npm run build
-           cdk diff
+           cdk diff || echo "ok"
            cdk deploy
 
 workflows:
