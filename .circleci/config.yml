@@ -22,6 +22,7 @@ jobs:
          command: |
            sudo npm install -g aws-cdk
            npm ci
+           npm audit
            npm run lint
            npm run build
            cdk synth
