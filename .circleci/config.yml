@@ -39,7 +39,7 @@ jobs:
            npm ci
            npm run build
            cdk diff || echo "ok"
-           cdk deploy
+           cdk deploy --require-approval=never
 
 workflows:
   build:
