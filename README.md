@@ -7,3 +7,9 @@
  * `cdk synth`       emits the synthesized CloudFormation template
 
 Reference: https://cdkworkshop.com
+
+### TAGS: 
+
+- 20-30-300 - Hello, CDK!
+- 20-40-700 - Writing constructs
+- 20-50-600 - Using construct libraries
